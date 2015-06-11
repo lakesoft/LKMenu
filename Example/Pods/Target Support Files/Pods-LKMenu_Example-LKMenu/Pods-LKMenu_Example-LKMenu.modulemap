@@ -1,0 +1,6 @@
+framework module LKMenu {
+  umbrella header "Pods-LKMenu_Example-LKMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

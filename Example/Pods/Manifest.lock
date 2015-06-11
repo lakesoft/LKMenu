@@ -1,0 +1,14 @@
+PODS:
+  - LKMenu (0.1.0)
+
+DEPENDENCIES:
+  - LKMenu (from `../`)
+
+EXTERNAL SOURCES:
+  LKMenu:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LKMenu: 0a4a12b777a78d03b6a19ec4f4e0cc014aff78c4
+
+COCOAPODS: 0.37.2

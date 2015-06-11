@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LKMenu
 
 class ViewController: UIViewController {
 
@@ -20,5 +21,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onOpen(sender: AnyObject) {
+        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD"], selectedIndex:2) { result in
+            switch result {
+            case .Cancel:
+                println("canceled")
+            case .Selected(let index):
+                println("selected: \(index)")
+            }
+        }
+    }
 }
 
