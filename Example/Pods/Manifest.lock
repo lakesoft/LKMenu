@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LKMenu: 0a4a12b777a78d03b6a19ec4f4e0cc014aff78c4
+  LKMenu: 2d4cceef1f8f4a694f17bf658700d77728e9de0c
 
 COCOAPODS: 0.37.2

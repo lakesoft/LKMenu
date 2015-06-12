@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onOpen(sender: AnyObject) {
-        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD"], selectedIndex:2) { result in
+        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD"], selectedIndex:2, title:"Menu Sample") { result in
             switch result {
             case .Cancel:
                 println("canceled")

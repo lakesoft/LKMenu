@@ -8,21 +8,36 @@
 
 import UIKit
 
-public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
+public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate {
+    
+    public class Appearance {
+        var tintColor:UIColor = UIColor.lightGrayColor()
+        var titleColor:UIColor = UIColor.whiteColor()
+        var tableColor:UIColor = UIColor.whiteColor()
+        var cellTextColor:UIColor = UIColor.grayColor()
+    }
+    
+    class MenuItemCell:UITableViewCell {
+        
+    }
     
     static let sharedMenu = LKMenu()
     
-    var backView:UIView!
-    var tableView:UITableView!
-    var v1c: NSLayoutConstraint!
+    @IBOutlet weak var backView:UIView!
+    @IBOutlet weak var tableView:UITableView!
 
+    @IBOutlet weak var barView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet weak var barHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
+
+    var appearance:Appearance!
     var opened: Bool = false
     
     var selectedIndex:Int?
     var menuItems: [String]!
 
-    weak var parentView:UIView!
-    
     public enum Result {
         case Cancel
         case Selected(index:Int)
@@ -35,22 +50,25 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
             backView.removeFromSuperview()
             backView = nil
         }
-        if tableView != nil {
-            tableView.removeFromSuperview()
-            tableView = nil
-        }
-        self.v1c = nil
-        self.parentView = nil
         self.completion = nil
         self.selectedIndex = nil
         self.menuItems = nil
     }
     
-    func addBackView(parentView:UIView) {
-        backView = UIView()
+    func loadViews(parentView:UIView, title:String?) {
+        
+        let frameworkBundle = NSBundle(forClass: LKMenu.self)
+        let path = frameworkBundle.pathForResource("LKMenu", ofType: "bundle")!
+        let bundle = NSBundle(path: path)
+        let nib = UINib(nibName: "LKMenu", bundle: bundle)
+        nib.instantiateWithOwner(self, options: nil)
+        
         backView.alpha = 0.0
-        backView.backgroundColor = UIColor(white: 0.0, alpha: 0.25)
-        backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onBackView"))
+        let g1 = UITapGestureRecognizer(target: self, action: "onBackView")
+        backView.addGestureRecognizer(g1)
+        g1.delegate = self
+
+        barView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onBackView"))
         
         parentView.addSubview(backView)
         backView.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -62,50 +80,49 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
         let vc0 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[backView]-0-|",
             options: NSLayoutFormatOptions(0), metrics: nil, views: views)
         parentView.addConstraints(vc0)
+        
+        if let str = title {
+            titleLabel.text = str
+        } else {
+            titleLabel.text = ""
+            barHeightConstraint.constant = 0
+        }
+        
     }
     
-    func addTableView(parentView:UIView) {
-        tableView = UITableView()
-        tableView.dataSource = self
-        tableView.delegate = self
-        parentView.addSubview(tableView)
-        tableView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        let h1c = NSLayoutConstraint(item: tableView, attribute: .Left, relatedBy: .Equal,
-            toItem: parentView, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        parentView.addConstraint(h1c)
-        let h2c = NSLayoutConstraint(item: tableView, attribute: .Right, relatedBy: .Equal,
-            toItem: parentView, attribute: .Right, multiplier: 1.0, constant: 0.0)
-        parentView.addConstraint(h2c)
-        
-        let v1c = NSLayoutConstraint(item: tableView, attribute: .Top, relatedBy: .Equal,
-            toItem: parentView, attribute: .CenterY, multiplier: 1.0, constant: parentView.frame.size.height)
-        parentView.addConstraint(v1c)
-        let v2c = NSLayoutConstraint(item: tableView, attribute: .Bottom, relatedBy: .Equal,
-            toItem: parentView, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-        v2c.priority = 750
-        parentView.addConstraint(v2c)
-
-        self.v1c = v1c  // not good code
+    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if (touch.view == backView) {
+            return true;
+        }else{
+            return false;
+        }
     }
     
-    func open(parentView:UIView, menuItems:[String], selectedIndex:Int?, completion:(result:Result)->Void) {
+    func setupAppearance() {
+        barView.backgroundColor = appearance.tintColor
+        titleLabel.textColor = appearance.titleColor
+        MenuItemCell.appearance().tintColor = appearance.tintColor
+    }
+    
+    func open(parentView:UIView, menuItems:[String], selectedIndex:Int?, title:String?, appearance:Appearance, completion:(result:Result)->Void) {
         
         reset()
 
-        self.parentView = parentView
+        self.appearance = appearance
         self.completion = completion
         self.selectedIndex = selectedIndex
         self.menuItems = menuItems
         
         opened = true
 
-        addBackView(parentView)
-        addTableView(parentView)
+        loadViews(parentView, title:title)
+        setupAppearance()
 
+        // opening animation
+        tableHeightConstraint.constant = 0.0
         parentView.layoutIfNeeded()
-        
-        v1c.constant = 0.0
+
+        tableHeightConstraint.constant = 240.0
         UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7,
             initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
             animations: { () -> Void in
@@ -116,10 +133,11 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
     }
     
     func close(duration:NSTimeInterval = 0.2) {
-        v1c.constant = parentView.frame.size.height
+        tableHeightConstraint.constant = 0.0
         UIView.animateWithDuration(duration, animations: { () -> Void in
             self.backView.alpha = 0.0
-            self.parentView.layoutIfNeeded()
+            self.backView.layoutIfNeeded()
+//            self.parentView.layoutIfNeeded()
         }) { (Bool) -> Void in
             self.reset()
             self.opened = false
@@ -137,8 +155,10 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
 
     
     // MARK: - API
-    public class func open(parentView:UIView, menuItems:[String], selectedIndex:Int?=nil, completion:(result:Result)->Void) {
-        sharedMenu.open(parentView, menuItems:menuItems, selectedIndex:selectedIndex, completion:completion)
+    public class func open(parentView:UIView, menuItems:[String],
+        selectedIndex:Int?=nil, title:String?=nil, appearance:Appearance=Appearance(),
+        completion:(result:Result)->Void) {
+            sharedMenu.open(parentView, menuItems:menuItems, selectedIndex:selectedIndex, title:title, appearance:appearance, completion:completion)
     }
     public class func close() {
         sharedMenu.close()
@@ -154,9 +174,10 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate {
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .Default, reuseIdentifier: "LKMenuControllerCell")
+        let cell = MenuItemCell(style: .Default, reuseIdentifier: "MenuItemCell")
 
         cell.textLabel?.text = menuItems[indexPath.row]
+        cell.textLabel?.textColor = appearance.cellTextColor
         
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
