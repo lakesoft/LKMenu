@@ -11,12 +11,12 @@ import UIKit
 public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate {
     
     public class Appearance {
-        var tintColor:UIColor = UIColor.lightGrayColor()
-        var titleColor:UIColor = UIColor.whiteColor()
-        var tableColor:UIColor = UIColor(white: 1.0, alpha: 0.9)
-        var cellColor:UIColor = UIColor.clearColor()
-        var cellTextColor:UIColor = UIColor.grayColor()
-        var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
+        public var tintColor:UIColor = UIColor.lightGrayColor()
+        public var titleColor:UIColor = UIColor.whiteColor()
+        public var tableColor:UIColor = UIColor(white: 1.0, alpha: 0.9)
+        public var cellColor:UIColor = UIColor.clearColor()
+        public var cellTextColor:UIColor = UIColor.grayColor()
+        public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
         public enum BarStyle {
             case Top
             case Bottom
