@@ -13,8 +13,16 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     public class Appearance {
         var tintColor:UIColor = UIColor.lightGrayColor()
         var titleColor:UIColor = UIColor.whiteColor()
-        var tableColor:UIColor = UIColor.whiteColor()
+        var tableColor:UIColor = UIColor(white: 1.0, alpha: 0.9)
+        var cellColor:UIColor = UIColor.clearColor()
         var cellTextColor:UIColor = UIColor.grayColor()
+        var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
+        public enum BarStyle {
+            case Top
+            case Bottom
+        }
+        
+        var barStyle:BarStyle = .Top
     }
     
     class MenuItemCell:UITableViewCell {
@@ -26,12 +34,19 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     @IBOutlet weak var backView:UIView!
     @IBOutlet weak var tableView:UITableView!
 
-    @IBOutlet weak var barView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var barView1: UIView!
+    @IBOutlet weak var barView2: UIView!
+    @IBOutlet weak var titleLabel1: UILabel!
+    @IBOutlet weak var titleLabel2: UILabel!
+    @IBOutlet weak var closeButton1: UIButton!
+    @IBOutlet weak var closeButton2: UIButton!
 
-    @IBOutlet weak var barHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bar1HeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bar2HeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
 
+    @IBOutlet weak var shadowView1: UIView!
+    
     var appearance:Appearance!
     var opened: Bool = false
     
@@ -68,7 +83,8 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         backView.addGestureRecognizer(g1)
         g1.delegate = self
 
-        barView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onBackView"))
+//        barView1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onBackView"))
+//        barView2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onBackView"))
         
         parentView.addSubview(backView)
         backView.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -82,11 +98,23 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         parentView.addConstraints(vc0)
         
         if let str = title {
-            titleLabel.text = str
+            switch appearance.barStyle {
+            case .Top:
+                titleLabel1.text = str
+                bar2HeightConstraint.constant = 0
+                barView2.hidden = true
+            case .Bottom:
+                titleLabel2.text = str
+                bar1HeightConstraint.constant = 0
+                barView1.hidden = true
+            }
         } else {
-            titleLabel.text = ""
-            barHeightConstraint.constant = 0
+            bar1HeightConstraint.constant = 0
+            bar2HeightConstraint.constant = 0
+            barView1.hidden = true
+            barView2.hidden = true
         }
+        addDropShadowAtBottom(shadowView1)
         
     }
     
@@ -99,9 +127,15 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     }
     
     func setupAppearance() {
-        barView.backgroundColor = appearance.tintColor
-        titleLabel.textColor = appearance.titleColor
+        barView1.backgroundColor = appearance.tintColor
+        barView2.backgroundColor = appearance.tintColor
+        titleLabel1.textColor = appearance.titleColor
+        titleLabel2.textColor = appearance.titleColor
+        closeButton1.tintColor = appearance.titleColor
+        closeButton2.tintColor = appearance.titleColor
         MenuItemCell.appearance().tintColor = appearance.tintColor
+        tableView.backgroundColor = appearance.tableColor
+        backView.backgroundColor = appearance.backColor
     }
     
     func open(parentView:UIView, menuItems:[String], selectedIndex:Int?, title:String?, appearance:Appearance, completion:(result:Result)->Void) {
@@ -178,6 +212,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
 
         cell.textLabel?.text = menuItems[indexPath.row]
         cell.textLabel?.textColor = appearance.cellTextColor
+        cell.backgroundColor = appearance.cellColor
         
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
@@ -191,6 +226,10 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         close()
     }
 
+    @IBAction func onClose(sender: AnyObject) {
+        self.close()
+    }
+
     // close by dragging down
     let PulldownMargin = CGFloat(80.0)
     public func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -199,4 +238,28 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
             close(duration: 0.4)
         }
     }
+}
+
+func addDropShadowAtTop(view:UIView) {
+    let subLayer = CALayer()
+    subLayer.frame = CGRectMake(view.bounds.origin.x, view.bounds.origin.y, 99999.0, view.bounds.size.height)
+    view.layer.addSublayer(subLayer)
+    subLayer.masksToBounds = true
+    let path = UIBezierPath(rect:CGRectMake(-7.5, -7.5, subLayer.bounds.size.width+7.5, 7.5))
+    subLayer.shadowOffset = CGSizeMake(2.5, 2.5)
+    subLayer.shadowColor = UIColor.blackColor().CGColor
+    subLayer.shadowOpacity = 0.2
+    subLayer.shadowPath = path.CGPath
+}
+
+func addDropShadowAtBottom(view:UIView) {
+    let subLayer = CALayer()
+    subLayer.frame = CGRectMake(view.bounds.origin.x, view.bounds.origin.y, 99999.0, view.bounds.size.height)
+    view.layer.addSublayer(subLayer)
+    subLayer.masksToBounds = true
+    let path = UIBezierPath(rect:CGRectMake(-7.5, view.bounds.height, subLayer.bounds.size.width+7.5, 7.5))
+    subLayer.shadowOffset = CGSizeMake(2.5, -2.5)
+    subLayer.shadowColor = UIColor.blackColor().CGColor
+    subLayer.shadowOpacity = 0.1
+    subLayer.shadowPath = path.CGPath
 }
