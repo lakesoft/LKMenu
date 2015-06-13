@@ -7,442 +7,369 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05F204F6B278072B1FA7BD12 /* LKMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92E8BE71BFC1F34D4FE8C286 /* LKMenu.bundle */; };
-		0EAF460CA69F9CF0EAA0800F /* Pods-LKMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE585EF947DEB1E38805709 /* Pods-LKMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F62B6152F04EC809286F2FB /* Pods-LKMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D936070C863357A78A8CF97 /* Pods-LKMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0FAE7B90584084DEBFC2FE85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7103914450FDF0240DE1C003 /* Foundation.framework */; };
-		1BC317DF8EB8657D298B9C54 /* Pods-LKMenu_Example-LKMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A5FF9077F44E226B79D117 /* Pods-LKMenu_Example-LKMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3027D0500AF3E03C121ADB14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7103914450FDF0240DE1C003 /* Foundation.framework */; };
-		59582D45A6726A3EAE4E1425 /* LKMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93EFFD5F77E1C231B2274E40 /* LKMenu.bundle */; };
-		5ABF69B2B4353F9DD6125BED /* Pods-LKMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDD27EE7EEB99EB9CC0D236 /* Pods-LKMenu_Example-dummy.m */; };
-		5B7883F96233A5B6626B408D /* Pods-LKMenu_Tests-LKMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 976BE298E611D82614FFE3EB /* Pods-LKMenu_Tests-LKMenu-dummy.m */; };
-		6814434BC588D3401FBD7FF6 /* Pods-LKMenu_Tests-LKMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 809AD5DA32802674A7586495 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C5CBBA60838B0DF6B770D73 /* Pods-LKMenu_Example-LKMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21ADC5DE689FC1FC3A4BC50C /* Pods-LKMenu_Example-LKMenu-dummy.m */; };
-		97148F2A1DEB9C4ABECB1256 /* LKMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12D5991D332E7D4BAAB87D05 /* LKMenu.xib */; };
-		C0B4568AFD282F8A80DE5839 /* LKMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0AB0BD420B77BB6D96FE2 /* LKMenu.swift */; };
-		D73CB4D6DBE44E91CF20C990 /* Pods-LKMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 764ED076A85277C4AB67295C /* Pods-LKMenu_Tests-dummy.m */; };
-		D94096A3C78337C45D17EB25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7103914450FDF0240DE1C003 /* Foundation.framework */; };
-		DE61A8C9DD0924178A0CB24B /* LKMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F0AB0BD420B77BB6D96FE2 /* LKMenu.swift */; };
-		E8F0B4DF603EAB3573338183 /* LKMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12D5991D332E7D4BAAB87D05 /* LKMenu.xib */; };
-		F3490ABF979D7E9D27621CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7103914450FDF0240DE1C003 /* Foundation.framework */; };
+		064EDADC5478AC70BEE5057F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */; };
+		1DCDF9D932CEF71DD3D691F0 /* Pods-LKMenu_Tests-LKMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25EFA00791774AF49CC5E8E9 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA9C700332E20FD3E3860C /* LKMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304D5B3C64A77C88FB200CDE /* LKMenu.xib */; };
+		21B7900BB077D47496C9AA1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */; };
+		2A84D968A4FA85FBEC6D381A /* Pods-LKMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1CD9F636BF45F444846A79 /* Pods-LKMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3559AFAC83F599F71C7E1AA7 /* Pods-LKMenu_Example-LKMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE61F70D80E67EBF0FF3ABD /* Pods-LKMenu_Example-LKMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42983D76A9CBA3A5057B3D81 /* LKMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8169A7F9648A98E66C53AD6 /* LKMenu.swift */; };
+		5B5793FF698994A88236CAF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */; };
+		5E4D1234B4208A8ED34594EF /* LKMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2DB5CBC2EE75CBBA4C2173A /* LKMenu.bundle */; };
+		7081A4155698149F965B5DA4 /* Pods-LKMenu_Tests-LKMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE33374C8C3B8189B583CCB /* Pods-LKMenu_Tests-LKMenu-dummy.m */; };
+		76DF5373C0ACE6B64F382AD6 /* LKMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8169A7F9648A98E66C53AD6 /* LKMenu.swift */; };
+		819F5BE1CE0E5E2953F290D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */; };
+		98B1B085C8AC50579165058B /* LKMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 304D5B3C64A77C88FB200CDE /* LKMenu.xib */; };
+		9F8C7D03F27B31C829E31AB1 /* Pods-LKMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 493D33AA8CF25653A858B51D /* Pods-LKMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3680F853AE392A1D403714 /* Pods-LKMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1638CB87DE7E35237346A1 /* Pods-LKMenu_Tests-dummy.m */; };
+		C6FD298253C1C382D8687AF1 /* Pods-LKMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F10A390B925832D920A01DE7 /* Pods-LKMenu_Example-dummy.m */; };
+		F26E4B2C8CA77750CE1A1A66 /* Pods-LKMenu_Example-LKMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85917165DDE9ACFAB9B3A6DB /* Pods-LKMenu_Example-LKMenu-dummy.m */; };
+		FFD8BB47397937EDE9BF59AF /* LKMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3A94CA5DABAC797ADEA02E3D /* LKMenu.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		07377BEEE8C66024676F6C37 /* PBXContainerItemProxy */ = {
+		44B5D5B600E12770F036456A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3C813972E1578F27EBA660BB /* Project object */;
+			containerPortal = 8741B059F2586C4560F34CD8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5C099A36D6937C98AC016324;
-			remoteInfo = "Pods-LKMenu_Tests-LKMenu";
-		};
-		1E5CF8C3EE6FAC599827AF68 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C813972E1578F27EBA660BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3FB62A4DD73DD8D8DD828CCC;
-			remoteInfo = "Pods-LKMenu_Tests-LKMenu-LKMenu";
-		};
-		6050C794C8A647F6ECB86CFB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3C813972E1578F27EBA660BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0D3734D364D7EECD6ACB2FA0;
+			remoteGlobalIDString = 551A2EFA8B4341D1FB523756;
 			remoteInfo = "Pods-LKMenu_Example-LKMenu";
 		};
-		B38167BF2C56F54F3CC61ED1 /* PBXContainerItemProxy */ = {
+		628F02E6CB597D044381491F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3C813972E1578F27EBA660BB /* Project object */;
+			containerPortal = 8741B059F2586C4560F34CD8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C55AE1DA24CDCA5D46EE0469;
+			remoteGlobalIDString = 1013631427B92A3B7D3D7EF8;
 			remoteInfo = "Pods-LKMenu_Example-LKMenu-LKMenu";
+		};
+		EFB074E74F166446C7CA3CB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8741B059F2586C4560F34CD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8361EE23D2810FEF750B2FC6;
+			remoteInfo = "Pods-LKMenu_Tests-LKMenu-LKMenu";
+		};
+		F8D2B4FF140F44901B00EC88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8741B059F2586C4560F34CD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9CDF992940C1469FC4E510D;
+			remoteInfo = "Pods-LKMenu_Tests-LKMenu";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0075DFED96DF07D2D5B63061 /* LKMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		01098ED406024C03B6BFA029 /* Pods-LKMenu_Tests-LKMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-LKMenu_Tests-LKMenu-prefix.pch"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch"; sourceTree = "<group>"; };
-		079C61FF82E62E3DA3D08407 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E46F9B8ED1876A9325527DD /* Pods-LKMenu_Example-LKMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example-LKMenu.xcconfig"; sourceTree = "<group>"; };
-		12D5991D332E7D4BAAB87D05 /* LKMenu.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LKMenu.xib; sourceTree = "<group>"; };
-		19C0C4C0170735E783B7C383 /* Pods-LKMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LKMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1EDD27EE7EEB99EB9CC0D236 /* Pods-LKMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Example-dummy.m"; sourceTree = "<group>"; };
-		21ADC5DE689FC1FC3A4BC50C /* Pods-LKMenu_Example-LKMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Example-LKMenu-dummy.m"; sourceTree = "<group>"; };
-		23B2B11A9DD11CD0278C5FAC /* Pods-LKMenu_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Tests.modulemap"; sourceTree = "<group>"; };
-		26B7CA9A90DC4B0594EA42CA /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2967ACE660AEA086009788E9 /* Pods-LKMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2BB069C7CB8E6399EA807CC7 /* Pods-LKMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		311652D36697A440F165B103 /* Pods-LKMenu_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Tests-environment.h"; sourceTree = "<group>"; };
-		3D0A96158383D1B229F7B692 /* Pods-LKMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Example.modulemap"; sourceTree = "<group>"; };
-		415D017101C0EE9162C0E238 /* Pods-LKMenu_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Example-resources.sh"; sourceTree = "<group>"; };
-		48E95385CB2192CD5CE9A4D6 /* Pods-LKMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4EEC5AE2A20605A3AF28ADE2 /* Pods-LKMenu_Tests-LKMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKMenu_Tests-LKMenu.xcconfig"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.xcconfig"; sourceTree = "<group>"; };
-		5A34E1C122ABD3AD226CC276 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D936070C863357A78A8CF97 /* Pods-LKMenu_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-umbrella.h"; sourceTree = "<group>"; };
-		6C9588CE486AEF0AFAD71C4D /* Pods-LKMenu_Example-LKMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Example-LKMenu.modulemap"; sourceTree = "<group>"; };
-		7103914450FDF0240DE1C003 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75E1395BE302F1C3A3FA4470 /* LKMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		764ED076A85277C4AB67295C /* Pods-LKMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Tests-dummy.m"; sourceTree = "<group>"; };
-		7931632334387BE67C7F0E2D /* Pods-LKMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		799527B7FCAAF2A9E289C81F /* Pods-LKMenu_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Tests-resources.sh"; sourceTree = "<group>"; };
-		7E2858819BB71E0C6669B36A /* Pods-LKMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7EE585EF947DEB1E38805709 /* Pods-LKMenu_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7FD4A57E2AAD771C77B6E30B /* Pods-LKMenu_Example-LKMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-LKMenu-prefix.pch"; sourceTree = "<group>"; };
-		809AD5DA32802674A7586495 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-LKMenu_Tests-LKMenu-umbrella.h"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-umbrella.h"; sourceTree = "<group>"; };
-		8CB38DC0F0738B16076E8D7A /* Pods-LKMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8FCBD5046F74D0CD59C548FB /* Pods_LKMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92E8BE71BFC1F34D4FE8C286 /* LKMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		93EFFD5F77E1C231B2274E40 /* LKMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		97359F0663885F78720CC1FB /* Pods-LKMenu_Tests-LKMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-LKMenu_Tests-LKMenu.modulemap"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap"; sourceTree = "<group>"; };
-		976BE298E611D82614FFE3EB /* Pods-LKMenu_Tests-LKMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-LKMenu_Tests-LKMenu-dummy.m"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-dummy.m"; sourceTree = "<group>"; };
-		98703A01A1CC151672CDACA5 /* Pods-LKMenu_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-environment.h"; sourceTree = "<group>"; };
-		B239DE5B5D7C17508F6E0CEF /* Pods-LKMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B36E61A9C28EB8BD34B6BEBB /* Pods-LKMenu_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LKMenu_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B4A5FF9077F44E226B79D117 /* Pods-LKMenu_Example-LKMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-LKMenu-umbrella.h"; sourceTree = "<group>"; };
-		B5F0AB0BD420B77BB6D96FE2 /* LKMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKMenu.swift; sourceTree = "<group>"; };
-		B762A796093054D5E7016572 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-LKMenu_Tests-LKMenu/Info.plist"; sourceTree = "<group>"; };
-		C1171D1949FB4CCF241B6BCC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example-LKMenu-Private.xcconfig"; sourceTree = "<group>"; };
-		E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKMenu_Tests-LKMenu-Private.xcconfig"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-Private.xcconfig"; sourceTree = "<group>"; };
-		F40DC8E94575DE76B7ABB21D /* Pods_LKMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B27CE6E95D64C64865ABFD /* Pods-LKMenu_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0122A59E8F89E3392E58E2E2 /* Pods-LKMenu_Tests-LKMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKMenu_Tests-LKMenu.xcconfig"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.xcconfig"; sourceTree = "<group>"; };
+		05259AB4F21E22065928B138 /* LKMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6A57F725281BC27C7E4690 /* Pods-LKMenu_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LKMenu_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		181E7D9316F0184D68C9BF28 /* Pods-LKMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		18F4FD550699255583E2B37C /* Pods-LKMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1A1638CB87DE7E35237346A1 /* Pods-LKMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Tests-dummy.m"; sourceTree = "<group>"; };
+		1D2D2C74C2D8D5DFF10AB5BD /* Pods-LKMenu_Tests-LKMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-LKMenu_Tests-LKMenu-prefix.pch"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch"; sourceTree = "<group>"; };
+		20A01A491F1BF5283FA5B0C7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25EFA00791774AF49CC5E8E9 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-LKMenu_Tests-LKMenu-umbrella.h"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-umbrella.h"; sourceTree = "<group>"; };
+		304D5B3C64A77C88FB200CDE /* LKMenu.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LKMenu.xib; sourceTree = "<group>"; };
+		311A0FCD75349D8FE54BACA2 /* Pods-LKMenu_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Example-resources.sh"; sourceTree = "<group>"; };
+		37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LKMenu_Tests-LKMenu-Private.xcconfig"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		385F963D98EC06C9051D035E /* Pods-LKMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3A94CA5DABAC797ADEA02E3D /* LKMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FFBBD04803891C7E3CFCA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C812575C4FC22D45487473 /* Pods-LKMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LKMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		475C76DBDC68CFF9B6E1137C /* Pods-LKMenu_Example-LKMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Example-LKMenu.modulemap"; sourceTree = "<group>"; };
+		4876F7D7E2D4F78A8779CBB6 /* Pods-LKMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LKMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		493D33AA8CF25653A858B51D /* Pods-LKMenu_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4FC97EC26EF126D214CAF731 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		524DCBFE8E4C8681896382BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		532B5F160AAE6F46420F5630 /* Pods-LKMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
+		56FA9D688025862565E08016 /* Pods-LKMenu_Example-LKMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-LKMenu-prefix.pch"; sourceTree = "<group>"; };
+		5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		626CB306A951EA0E8CC3B0BB /* LKMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1CD9F636BF45F444846A79 /* Pods-LKMenu_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-umbrella.h"; sourceTree = "<group>"; };
+		7AE33374C8C3B8189B583CCB /* Pods-LKMenu_Tests-LKMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-LKMenu_Tests-LKMenu-dummy.m"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-dummy.m"; sourceTree = "<group>"; };
+		83AAD63ACF34CF6CAA6BF7FC /* Pods-LKMenu_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Tests-resources.sh"; sourceTree = "<group>"; };
+		85917165DDE9ACFAB9B3A6DB /* Pods-LKMenu_Example-LKMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Example-LKMenu-dummy.m"; sourceTree = "<group>"; };
+		9971C0592D46B0A2B8957648 /* Pods-LKMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Example.modulemap"; sourceTree = "<group>"; };
+		A45F3E173E365EA9FE65D97C /* Pods_LKMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6376E9418883E417405888D /* Pods-LKMenu_Example-LKMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example-LKMenu.xcconfig"; sourceTree = "<group>"; };
+		AC429DDE1F28257B9D7D6570 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-LKMenu_Tests-LKMenu/Info.plist"; sourceTree = "<group>"; };
+		B69438264DD71C60C39F5733 /* Pods_LKMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LKMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED819ABC30955A63F11801C /* Pods-LKMenu_Tests-LKMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-LKMenu_Tests-LKMenu.modulemap"; path = "../Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap"; sourceTree = "<group>"; };
+		C8A7E0C5DEA5EB07DCCF0AED /* Pods-LKMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LKMenu_Example-LKMenu-Private.xcconfig"; sourceTree = "<group>"; };
+		E2DB5CBC2EE75CBBA4C2173A /* LKMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LKMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5D3563DF977567527EF4BF0 /* Pods-LKMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E8169A7F9648A98E66C53AD6 /* LKMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LKMenu.swift; sourceTree = "<group>"; };
+		EA100DFEE2DDD2945457DDED /* Pods-LKMenu_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LKMenu_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		F10A390B925832D920A01DE7 /* Pods-LKMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LKMenu_Example-dummy.m"; sourceTree = "<group>"; };
+		F1E08AB54ABA6B39D91BB1E7 /* Pods-LKMenu_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Tests-environment.h"; sourceTree = "<group>"; };
+		F7D3413741F7A473C6487C77 /* Pods-LKMenu_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LKMenu_Tests.modulemap"; sourceTree = "<group>"; };
+		FAE61F70D80E67EBF0FF3ABD /* Pods-LKMenu_Example-LKMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-LKMenu-umbrella.h"; sourceTree = "<group>"; };
+		FD9E4E715489AEFF9263271A /* Pods-LKMenu_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LKMenu_Example-environment.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		63DFED0C1CAC31B1D378B659 /* Frameworks */ = {
+		3E35A304AF8678AB38804E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064EDADC5478AC70BEE5057F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A782009A9462FAC3C74C0A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		663D755E484A5BBC30DBCD3B /* Frameworks */ = {
+		B8379903588D9E0B90D29246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5793FF698994A88236CAF3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2873B0FF4B7E497AE2BE20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819F5BE1CE0E5E2953F290D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F14CF450047DCF7D6EC5E112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FFC674C87B6A3BE22623115 /* Frameworks */ = {
+		FF14EA457B81B869F6EDBC90 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3027D0500AF3E03C121ADB14 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		975C89B0B87EFA73E4E4811A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D94096A3C78337C45D17EB25 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1FB6E69A7A484B7FD1D54A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3490ABF979D7E9D27621CB1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0C9E052308F35C2748C343D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FAE7B90584084DEBFC2FE85 /* Foundation.framework in Frameworks */,
+				21B7900BB077D47496C9AA1E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15990B74C59A16334871D68F /* Targets Support Files */ = {
+		052DB037C68979BC15D2A556 /* Pods-LKMenu_Example */ = {
 			isa = PBXGroup;
 			children = (
-				C56BC339DA482D66BCA9F872 /* Pods-LKMenu_Example */,
-				50A924C52D414B10268EB601 /* Pods-LKMenu_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		50A924C52D414B10268EB601 /* Pods-LKMenu_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5A34E1C122ABD3AD226CC276 /* Info.plist */,
-				23B2B11A9DD11CD0278C5FAC /* Pods-LKMenu_Tests.modulemap */,
-				B36E61A9C28EB8BD34B6BEBB /* Pods-LKMenu_Tests-acknowledgements.markdown */,
-				7931632334387BE67C7F0E2D /* Pods-LKMenu_Tests-acknowledgements.plist */,
-				764ED076A85277C4AB67295C /* Pods-LKMenu_Tests-dummy.m */,
-				311652D36697A440F165B103 /* Pods-LKMenu_Tests-environment.h */,
-				F4B27CE6E95D64C64865ABFD /* Pods-LKMenu_Tests-frameworks.sh */,
-				799527B7FCAAF2A9E289C81F /* Pods-LKMenu_Tests-resources.sh */,
-				7EE585EF947DEB1E38805709 /* Pods-LKMenu_Tests-umbrella.h */,
-				2967ACE660AEA086009788E9 /* Pods-LKMenu_Tests.debug.xcconfig */,
-				2BB069C7CB8E6399EA807CC7 /* Pods-LKMenu_Tests.release.xcconfig */,
-			);
-			name = "Pods-LKMenu_Tests";
-			path = "Target Support Files/Pods-LKMenu_Tests";
-			sourceTree = "<group>";
-		};
-		622E442551D0E880EE1A28A9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B5F0AB0BD420B77BB6D96FE2 /* LKMenu.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		73F3C39A094CC3935EAF1718 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				E6454C250F3E88AA5EF7E688 /* Assets */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
-		A539B603082E3B735C28013D /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7103914450FDF0240DE1C003 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		B9912B0AB6A973DCA0B4EFAB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				92E8BE71BFC1F34D4FE8C286 /* LKMenu.bundle */,
-				93EFFD5F77E1C231B2274E40 /* LKMenu.bundle */,
-				0075DFED96DF07D2D5B63061 /* LKMenu.framework */,
-				75E1395BE302F1C3A3FA4470 /* LKMenu.framework */,
-				F40DC8E94575DE76B7ABB21D /* Pods_LKMenu_Example.framework */,
-				8FCBD5046F74D0CD59C548FB /* Pods_LKMenu_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BB7105BEFEC787E4065267DB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				73F3C39A094CC3935EAF1718 /* Pod */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		C56BC339DA482D66BCA9F872 /* Pods-LKMenu_Example */ = {
-			isa = PBXGroup;
-			children = (
-				079C61FF82E62E3DA3D08407 /* Info.plist */,
-				3D0A96158383D1B229F7B692 /* Pods-LKMenu_Example.modulemap */,
-				19C0C4C0170735E783B7C383 /* Pods-LKMenu_Example-acknowledgements.markdown */,
-				7E2858819BB71E0C6669B36A /* Pods-LKMenu_Example-acknowledgements.plist */,
-				1EDD27EE7EEB99EB9CC0D236 /* Pods-LKMenu_Example-dummy.m */,
-				98703A01A1CC151672CDACA5 /* Pods-LKMenu_Example-environment.h */,
-				48E95385CB2192CD5CE9A4D6 /* Pods-LKMenu_Example-frameworks.sh */,
-				415D017101C0EE9162C0E238 /* Pods-LKMenu_Example-resources.sh */,
-				5D936070C863357A78A8CF97 /* Pods-LKMenu_Example-umbrella.h */,
-				8CB38DC0F0738B16076E8D7A /* Pods-LKMenu_Example.debug.xcconfig */,
-				B239DE5B5D7C17508F6E0CEF /* Pods-LKMenu_Example.release.xcconfig */,
+				20A01A491F1BF5283FA5B0C7 /* Info.plist */,
+				9971C0592D46B0A2B8957648 /* Pods-LKMenu_Example.modulemap */,
+				4876F7D7E2D4F78A8779CBB6 /* Pods-LKMenu_Example-acknowledgements.markdown */,
+				45C812575C4FC22D45487473 /* Pods-LKMenu_Example-acknowledgements.plist */,
+				F10A390B925832D920A01DE7 /* Pods-LKMenu_Example-dummy.m */,
+				FD9E4E715489AEFF9263271A /* Pods-LKMenu_Example-environment.h */,
+				E5D3563DF977567527EF4BF0 /* Pods-LKMenu_Example-frameworks.sh */,
+				311A0FCD75349D8FE54BACA2 /* Pods-LKMenu_Example-resources.sh */,
+				6E1CD9F636BF45F444846A79 /* Pods-LKMenu_Example-umbrella.h */,
+				C8A7E0C5DEA5EB07DCCF0AED /* Pods-LKMenu_Example.debug.xcconfig */,
+				532B5F160AAE6F46420F5630 /* Pods-LKMenu_Example.release.xcconfig */,
 			);
 			name = "Pods-LKMenu_Example";
 			path = "Target Support Files/Pods-LKMenu_Example";
 			sourceTree = "<group>";
 		};
-		D19D880C466B43D5408619A5 /* LKMenu */ = {
+		0EB556F98A78A3C606D389FB /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				EAA4B38AC980EE22E16FD7F1 /* Pod */,
-				BB7105BEFEC787E4065267DB /* Resources */,
-				F6D00E2739B13AC9635D3035 /* Support Files */,
+				701934510A8C23E238AC2B0B /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		1A200B671746A4D3C7B76630 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C4BBB3F6EF1B3412B65746CE /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		1BAB2958C4685FBB88249D75 /* LKMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1A200B671746A4D3C7B76630 /* Pod */,
+				5597D8DCAA906B380CEC96D6 /* Resources */,
+				CBBA8B1DB93EEED46F8B11BC /* Support Files */,
 			);
 			name = LKMenu;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		D3B05FE7AC4E3E075BF62212 = {
+		278C360EDB27BC84F4F6DE09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26B7CA9A90DC4B0594EA42CA /* Podfile */,
-				E6FD0FFACEBDE2445CB366F9 /* Development Pods */,
-				D51E656BDFD19F83BC539537 /* Frameworks */,
-				B9912B0AB6A973DCA0B4EFAB /* Products */,
-				15990B74C59A16334871D68F /* Targets Support Files */,
+				E2DB5CBC2EE75CBBA4C2173A /* LKMenu.bundle */,
+				3A94CA5DABAC797ADEA02E3D /* LKMenu.bundle */,
+				626CB306A951EA0E8CC3B0BB /* LKMenu.framework */,
+				05259AB4F21E22065928B138 /* LKMenu.framework */,
+				B69438264DD71C60C39F5733 /* Pods_LKMenu_Example.framework */,
+				A45F3E173E365EA9FE65D97C /* Pods_LKMenu_Tests.framework */,
 			);
+			name = Products;
 			sourceTree = "<group>";
 		};
-		D51E656BDFD19F83BC539537 /* Frameworks */ = {
+		4BEAC1C4A0917C9867808541 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A539B603082E3B735C28013D /* iOS */,
+				7C325E8ECB4CF25771D1810D /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E6454C250F3E88AA5EF7E688 /* Assets */ = {
+		53B74866120A0B388E1FB15B = {
 			isa = PBXGroup;
 			children = (
-				12D5991D332E7D4BAAB87D05 /* LKMenu.xib */,
+				4FC97EC26EF126D214CAF731 /* Podfile */,
+				5D012053F9398789EDC16CC6 /* Development Pods */,
+				4BEAC1C4A0917C9867808541 /* Frameworks */,
+				278C360EDB27BC84F4F6DE09 /* Products */,
+				CD1B3D287B3B9AD11E0CEA6E /* Targets Support Files */,
 			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
-		E6FD0FFACEBDE2445CB366F9 /* Development Pods */ = {
+		5597D8DCAA906B380CEC96D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D19D880C466B43D5408619A5 /* LKMenu */,
+				0EB556F98A78A3C606D389FB /* Pod */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5D012053F9398789EDC16CC6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BAB2958C4685FBB88249D75 /* LKMenu */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		EAA4B38AC980EE22E16FD7F1 /* Pod */ = {
+		701934510A8C23E238AC2B0B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				622E442551D0E880EE1A28A9 /* Classes */,
+				304D5B3C64A77C88FB200CDE /* LKMenu.xib */,
 			);
-			path = Pod;
+			path = Assets;
 			sourceTree = "<group>";
 		};
-		F6D00E2739B13AC9635D3035 /* Support Files */ = {
+		7C325E8ECB4CF25771D1810D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C1171D1949FB4CCF241B6BCC /* Info.plist */,
-				B762A796093054D5E7016572 /* Info.plist */,
-				6C9588CE486AEF0AFAD71C4D /* Pods-LKMenu_Example-LKMenu.modulemap */,
-				0E46F9B8ED1876A9325527DD /* Pods-LKMenu_Example-LKMenu.xcconfig */,
-				D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */,
-				21ADC5DE689FC1FC3A4BC50C /* Pods-LKMenu_Example-LKMenu-dummy.m */,
-				7FD4A57E2AAD771C77B6E30B /* Pods-LKMenu_Example-LKMenu-prefix.pch */,
-				B4A5FF9077F44E226B79D117 /* Pods-LKMenu_Example-LKMenu-umbrella.h */,
-				97359F0663885F78720CC1FB /* Pods-LKMenu_Tests-LKMenu.modulemap */,
-				4EEC5AE2A20605A3AF28ADE2 /* Pods-LKMenu_Tests-LKMenu.xcconfig */,
-				E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */,
-				976BE298E611D82614FFE3EB /* Pods-LKMenu_Tests-LKMenu-dummy.m */,
-				01098ED406024C03B6BFA029 /* Pods-LKMenu_Tests-LKMenu-prefix.pch */,
-				809AD5DA32802674A7586495 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */,
+				5B1D29FEEF6901BAE4714AE1 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C4BBB3F6EF1B3412B65746CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8169A7F9648A98E66C53AD6 /* LKMenu.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CBBA8B1DB93EEED46F8B11BC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41FFBBD04803891C7E3CFCA8 /* Info.plist */,
+				AC429DDE1F28257B9D7D6570 /* Info.plist */,
+				475C76DBDC68CFF9B6E1137C /* Pods-LKMenu_Example-LKMenu.modulemap */,
+				A6376E9418883E417405888D /* Pods-LKMenu_Example-LKMenu.xcconfig */,
+				C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */,
+				85917165DDE9ACFAB9B3A6DB /* Pods-LKMenu_Example-LKMenu-dummy.m */,
+				56FA9D688025862565E08016 /* Pods-LKMenu_Example-LKMenu-prefix.pch */,
+				FAE61F70D80E67EBF0FF3ABD /* Pods-LKMenu_Example-LKMenu-umbrella.h */,
+				BED819ABC30955A63F11801C /* Pods-LKMenu_Tests-LKMenu.modulemap */,
+				0122A59E8F89E3392E58E2E2 /* Pods-LKMenu_Tests-LKMenu.xcconfig */,
+				37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */,
+				7AE33374C8C3B8189B583CCB /* Pods-LKMenu_Tests-LKMenu-dummy.m */,
+				1D2D2C74C2D8D5DFF10AB5BD /* Pods-LKMenu_Tests-LKMenu-prefix.pch */,
+				25EFA00791774AF49CC5E8E9 /* Pods-LKMenu_Tests-LKMenu-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Pods-LKMenu_Example-LKMenu";
 			sourceTree = "<group>";
 		};
+		CBCABCBA7D4BB2DE9B8A0339 /* Pods-LKMenu_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				524DCBFE8E4C8681896382BE /* Info.plist */,
+				F7D3413741F7A473C6487C77 /* Pods-LKMenu_Tests.modulemap */,
+				0A6A57F725281BC27C7E4690 /* Pods-LKMenu_Tests-acknowledgements.markdown */,
+				18F4FD550699255583E2B37C /* Pods-LKMenu_Tests-acknowledgements.plist */,
+				1A1638CB87DE7E35237346A1 /* Pods-LKMenu_Tests-dummy.m */,
+				F1E08AB54ABA6B39D91BB1E7 /* Pods-LKMenu_Tests-environment.h */,
+				EA100DFEE2DDD2945457DDED /* Pods-LKMenu_Tests-frameworks.sh */,
+				83AAD63ACF34CF6CAA6BF7FC /* Pods-LKMenu_Tests-resources.sh */,
+				493D33AA8CF25653A858B51D /* Pods-LKMenu_Tests-umbrella.h */,
+				181E7D9316F0184D68C9BF28 /* Pods-LKMenu_Tests.debug.xcconfig */,
+				385F963D98EC06C9051D035E /* Pods-LKMenu_Tests.release.xcconfig */,
+			);
+			name = "Pods-LKMenu_Tests";
+			path = "Target Support Files/Pods-LKMenu_Tests";
+			sourceTree = "<group>";
+		};
+		CD1B3D287B3B9AD11E0CEA6E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				052DB037C68979BC15D2A556 /* Pods-LKMenu_Example */,
+				CBCABCBA7D4BB2DE9B8A0339 /* Pods-LKMenu_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		077E50C20E36A6FC60259303 /* Headers */ = {
+		117785728A837506457CAAD1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6814434BC588D3401FBD7FF6 /* Pods-LKMenu_Tests-LKMenu-umbrella.h in Headers */,
+				2A84D968A4FA85FBEC6D381A /* Pods-LKMenu_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59C7FE2F16A056FB9F0E14C8 /* Headers */ = {
+		7EED73213EE1573BC6515557 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC317DF8EB8657D298B9C54 /* Pods-LKMenu_Example-LKMenu-umbrella.h in Headers */,
+				1DCDF9D932CEF71DD3D691F0 /* Pods-LKMenu_Tests-LKMenu-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		886894874A8D6616F72D2825 /* Headers */ = {
+		ADEE9237F81F09D5DB938E77 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAF460CA69F9CF0EAA0800F /* Pods-LKMenu_Tests-umbrella.h in Headers */,
+				3559AFAC83F599F71C7E1AA7 /* Pods-LKMenu_Example-LKMenu-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A68A000190BED83FB3B4FE5D /* Headers */ = {
+		CF8F24580B3265335CA872E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F62B6152F04EC809286F2FB /* Pods-LKMenu_Example-umbrella.h in Headers */,
+				9F8C7D03F27B31C829E31AB1 /* Pods-LKMenu_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D3734D364D7EECD6ACB2FA0 /* Pods-LKMenu_Example-LKMenu */ = {
+		1013631427B92A3B7D3D7EF8 /* Pods-LKMenu_Example-LKMenu-LKMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BCD4C219BB8921E1DBB1B951 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu" */;
+			buildConfigurationList = 7CB0A769F04B3AED87B4401F /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu-LKMenu" */;
 			buildPhases = (
-				C3B9815CCA67233DA9889664 /* Sources */,
-				A1FB6E69A7A484B7FD1D54A3 /* Frameworks */,
-				0922F2757ADCAC39288925B6 /* Resources */,
-				59C7FE2F16A056FB9F0E14C8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E8D59E34A85A9F8DE11E3BB /* PBXTargetDependency */,
-			);
-			name = "Pods-LKMenu_Example-LKMenu";
-			productName = "Pods-LKMenu_Example-LKMenu";
-			productReference = 0075DFED96DF07D2D5B63061 /* LKMenu.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3FB62A4DD73DD8D8DD828CCC /* Pods-LKMenu_Tests-LKMenu-LKMenu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD692F0E12118382E5BAFDD2 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu-LKMenu" */;
-			buildPhases = (
-				F81645A781174D4EA697C3DB /* Sources */,
-				63DFED0C1CAC31B1D378B659 /* Frameworks */,
-				982B8E5DE1FE31A3D1EBCD02 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-LKMenu_Tests-LKMenu-LKMenu";
-			productName = "Pods-LKMenu_Tests-LKMenu-LKMenu";
-			productReference = 92E8BE71BFC1F34D4FE8C286 /* LKMenu.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		5C099A36D6937C98AC016324 /* Pods-LKMenu_Tests-LKMenu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EFE4D0EF0357D1B23E2A991 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu" */;
-			buildPhases = (
-				AEBBF2124C2E884BEF88B948 /* Sources */,
-				8FFC674C87B6A3BE22623115 /* Frameworks */,
-				2E0F3B2EAC817972EA780415 /* Resources */,
-				077E50C20E36A6FC60259303 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				292E5895A439F3571D45270D /* PBXTargetDependency */,
-			);
-			name = "Pods-LKMenu_Tests-LKMenu";
-			productName = "Pods-LKMenu_Tests-LKMenu";
-			productReference = 75E1395BE302F1C3A3FA4470 /* LKMenu.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A816FFEB53E82DFB484DFD96 /* Pods-LKMenu_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 267C768F115687CCB05E2FB6 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests" */;
-			buildPhases = (
-				A68740A0C405F4DD3EA2CA75 /* Sources */,
-				975C89B0B87EFA73E4E4811A /* Frameworks */,
-				886894874A8D6616F72D2825 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				528C9DAAD0F2E59E9C064FE5 /* PBXTargetDependency */,
-			);
-			name = "Pods-LKMenu_Tests";
-			productName = "Pods-LKMenu_Tests";
-			productReference = 8FCBD5046F74D0CD59C548FB /* Pods_LKMenu_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C55AE1DA24CDCA5D46EE0469 /* Pods-LKMenu_Example-LKMenu-LKMenu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27D004AD4E98A3615741683B /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu-LKMenu" */;
-			buildPhases = (
-				49279C68353F6812A4E682B7 /* Sources */,
-				663D755E484A5BBC30DBCD3B /* Frameworks */,
-				76FB9F23A8976D3C0B7574CA /* Resources */,
+				F211C856A5FBF3A110FCF7D4 /* Sources */,
+				F14CF450047DCF7D6EC5E112 /* Frameworks */,
+				992005E90D6954789F712498 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -450,135 +377,208 @@
 			);
 			name = "Pods-LKMenu_Example-LKMenu-LKMenu";
 			productName = "Pods-LKMenu_Example-LKMenu-LKMenu";
-			productReference = 93EFFD5F77E1C231B2274E40 /* LKMenu.bundle */;
+			productReference = 3A94CA5DABAC797ADEA02E3D /* LKMenu.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		F07E3D34D12CBE6AB0B1FD6E /* Pods-LKMenu_Example */ = {
+		2E6DAA414E3223B1DD24BFF1 /* Pods-LKMenu_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7C83A0EC55C08A01A76B27E /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example" */;
+			buildConfigurationList = 67E873F398B9FE6FEE223DFB /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example" */;
 			buildPhases = (
-				26D863B02635BE067BE1DFC6 /* Sources */,
-				E0C9E052308F35C2748C343D /* Frameworks */,
-				A68A000190BED83FB3B4FE5D /* Headers */,
+				0D243701D93884A3F1C2B311 /* Sources */,
+				3E35A304AF8678AB38804E08 /* Frameworks */,
+				117785728A837506457CAAD1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7F5D49C36C2B4EA769BDF665 /* PBXTargetDependency */,
+				47DCF2A9EEBC9165CA8562BE /* PBXTargetDependency */,
 			);
 			name = "Pods-LKMenu_Example";
 			productName = "Pods-LKMenu_Example";
-			productReference = F40DC8E94575DE76B7ABB21D /* Pods_LKMenu_Example.framework */;
+			productReference = B69438264DD71C60C39F5733 /* Pods_LKMenu_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		551A2EFA8B4341D1FB523756 /* Pods-LKMenu_Example-LKMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45CC1FD233F97DFCED8D7332 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu" */;
+			buildPhases = (
+				433B2A3C8A7EBC801D46C218 /* Sources */,
+				FF14EA457B81B869F6EDBC90 /* Frameworks */,
+				6B443A5A8FC43E737DC23049 /* Resources */,
+				ADEE9237F81F09D5DB938E77 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				790F6D26BAFB61BA0EFE5106 /* PBXTargetDependency */,
+			);
+			name = "Pods-LKMenu_Example-LKMenu";
+			productName = "Pods-LKMenu_Example-LKMenu";
+			productReference = 626CB306A951EA0E8CC3B0BB /* LKMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8361EE23D2810FEF750B2FC6 /* Pods-LKMenu_Tests-LKMenu-LKMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 866663BE17AF11CC7D2427DD /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu-LKMenu" */;
+			buildPhases = (
+				B5647DC27D91219D6DBFB8DB /* Sources */,
+				96A782009A9462FAC3C74C0A /* Frameworks */,
+				162B65C9AED209571A8F82D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LKMenu_Tests-LKMenu-LKMenu";
+			productName = "Pods-LKMenu_Tests-LKMenu-LKMenu";
+			productReference = E2DB5CBC2EE75CBBA4C2173A /* LKMenu.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A9CDF992940C1469FC4E510D /* Pods-LKMenu_Tests-LKMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB89F0841569DAE25EDE243 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu" */;
+			buildPhases = (
+				299E2CDCFCDEF8F357E9CC4E /* Sources */,
+				B8379903588D9E0B90D29246 /* Frameworks */,
+				20C83F832E1A9AF1A974A56E /* Resources */,
+				7EED73213EE1573BC6515557 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25DBEBAC04A63F9A34171DA1 /* PBXTargetDependency */,
+			);
+			name = "Pods-LKMenu_Tests-LKMenu";
+			productName = "Pods-LKMenu_Tests-LKMenu";
+			productReference = 05259AB4F21E22065928B138 /* LKMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC0F99413F592641E202BE47 /* Pods-LKMenu_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 079F87C472C55618A335B0A6 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests" */;
+			buildPhases = (
+				3ECD8EE0576A12BE1F48F22B /* Sources */,
+				D2873B0FF4B7E497AE2BE20E /* Frameworks */,
+				CF8F24580B3265335CA872E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF98F3D445D7808FDD5AA151 /* PBXTargetDependency */,
+			);
+			name = "Pods-LKMenu_Tests";
+			productName = "Pods-LKMenu_Tests";
+			productReference = A45F3E173E365EA9FE65D97C /* Pods_LKMenu_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3C813972E1578F27EBA660BB /* Project object */ = {
+		8741B059F2586C4560F34CD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = D8EE290B435844F7FB620C56 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 1A4C5A573426CC4FE3A839DB /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D3B05FE7AC4E3E075BF62212;
-			productRefGroup = B9912B0AB6A973DCA0B4EFAB /* Products */;
+			mainGroup = 53B74866120A0B388E1FB15B;
+			productRefGroup = 278C360EDB27BC84F4F6DE09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F07E3D34D12CBE6AB0B1FD6E /* Pods-LKMenu_Example */,
-				0D3734D364D7EECD6ACB2FA0 /* Pods-LKMenu_Example-LKMenu */,
-				C55AE1DA24CDCA5D46EE0469 /* Pods-LKMenu_Example-LKMenu-LKMenu */,
-				A816FFEB53E82DFB484DFD96 /* Pods-LKMenu_Tests */,
-				5C099A36D6937C98AC016324 /* Pods-LKMenu_Tests-LKMenu */,
-				3FB62A4DD73DD8D8DD828CCC /* Pods-LKMenu_Tests-LKMenu-LKMenu */,
+				2E6DAA414E3223B1DD24BFF1 /* Pods-LKMenu_Example */,
+				551A2EFA8B4341D1FB523756 /* Pods-LKMenu_Example-LKMenu */,
+				1013631427B92A3B7D3D7EF8 /* Pods-LKMenu_Example-LKMenu-LKMenu */,
+				EC0F99413F592641E202BE47 /* Pods-LKMenu_Tests */,
+				A9CDF992940C1469FC4E510D /* Pods-LKMenu_Tests-LKMenu */,
+				8361EE23D2810FEF750B2FC6 /* Pods-LKMenu_Tests-LKMenu-LKMenu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0922F2757ADCAC39288925B6 /* Resources */ = {
+		162B65C9AED209571A8F82D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59582D45A6726A3EAE4E1425 /* LKMenu.bundle in Resources */,
+				98B1B085C8AC50579165058B /* LKMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E0F3B2EAC817972EA780415 /* Resources */ = {
+		20C83F832E1A9AF1A974A56E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05F204F6B278072B1FA7BD12 /* LKMenu.bundle in Resources */,
+				5E4D1234B4208A8ED34594EF /* LKMenu.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76FB9F23A8976D3C0B7574CA /* Resources */ = {
+		6B443A5A8FC43E737DC23049 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97148F2A1DEB9C4ABECB1256 /* LKMenu.xib in Resources */,
+				FFD8BB47397937EDE9BF59AF /* LKMenu.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		982B8E5DE1FE31A3D1EBCD02 /* Resources */ = {
+		992005E90D6954789F712498 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8F0B4DF603EAB3573338183 /* LKMenu.xib in Resources */,
+				1FFA9C700332E20FD3E3860C /* LKMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26D863B02635BE067BE1DFC6 /* Sources */ = {
+		0D243701D93884A3F1C2B311 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ABF69B2B4353F9DD6125BED /* Pods-LKMenu_Example-dummy.m in Sources */,
+				C6FD298253C1C382D8687AF1 /* Pods-LKMenu_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49279C68353F6812A4E682B7 /* Sources */ = {
+		299E2CDCFCDEF8F357E9CC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42983D76A9CBA3A5057B3D81 /* LKMenu.swift in Sources */,
+				7081A4155698149F965B5DA4 /* Pods-LKMenu_Tests-LKMenu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3ECD8EE0576A12BE1F48F22B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3680F853AE392A1D403714 /* Pods-LKMenu_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		433B2A3C8A7EBC801D46C218 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76DF5373C0ACE6B64F382AD6 /* LKMenu.swift in Sources */,
+				F26E4B2C8CA77750CE1A1A66 /* Pods-LKMenu_Example-LKMenu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5647DC27D91219D6DBFB8DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A68740A0C405F4DD3EA2CA75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D73CB4D6DBE44E91CF20C990 /* Pods-LKMenu_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AEBBF2124C2E884BEF88B948 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0B4568AFD282F8A80DE5839 /* LKMenu.swift in Sources */,
-				5B7883F96233A5B6626B408D /* Pods-LKMenu_Tests-LKMenu-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3B9815CCA67233DA9889664 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE61A8C9DD0924178A0CB24B /* LKMenu.swift in Sources */,
-				6C5CBBA60838B0DF6B770D73 /* Pods-LKMenu_Example-LKMenu-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F81645A781174D4EA697C3DB /* Sources */ = {
+		F211C856A5FBF3A110FCF7D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -588,65 +588,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		292E5895A439F3571D45270D /* PBXTargetDependency */ = {
+		25DBEBAC04A63F9A34171DA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LKMenu_Tests-LKMenu-LKMenu";
-			target = 3FB62A4DD73DD8D8DD828CCC /* Pods-LKMenu_Tests-LKMenu-LKMenu */;
-			targetProxy = 1E5CF8C3EE6FAC599827AF68 /* PBXContainerItemProxy */;
+			target = 8361EE23D2810FEF750B2FC6 /* Pods-LKMenu_Tests-LKMenu-LKMenu */;
+			targetProxy = EFB074E74F166446C7CA3CB9 /* PBXContainerItemProxy */;
 		};
-		4E8D59E34A85A9F8DE11E3BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-LKMenu_Example-LKMenu-LKMenu";
-			target = C55AE1DA24CDCA5D46EE0469 /* Pods-LKMenu_Example-LKMenu-LKMenu */;
-			targetProxy = B38167BF2C56F54F3CC61ED1 /* PBXContainerItemProxy */;
-		};
-		528C9DAAD0F2E59E9C064FE5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-LKMenu_Tests-LKMenu";
-			target = 5C099A36D6937C98AC016324 /* Pods-LKMenu_Tests-LKMenu */;
-			targetProxy = 07377BEEE8C66024676F6C37 /* PBXContainerItemProxy */;
-		};
-		7F5D49C36C2B4EA769BDF665 /* PBXTargetDependency */ = {
+		47DCF2A9EEBC9165CA8562BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-LKMenu_Example-LKMenu";
-			target = 0D3734D364D7EECD6ACB2FA0 /* Pods-LKMenu_Example-LKMenu */;
-			targetProxy = 6050C794C8A647F6ECB86CFB /* PBXContainerItemProxy */;
+			target = 551A2EFA8B4341D1FB523756 /* Pods-LKMenu_Example-LKMenu */;
+			targetProxy = 44B5D5B600E12770F036456A /* PBXContainerItemProxy */;
+		};
+		790F6D26BAFB61BA0EFE5106 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LKMenu_Example-LKMenu-LKMenu";
+			target = 1013631427B92A3B7D3D7EF8 /* Pods-LKMenu_Example-LKMenu-LKMenu */;
+			targetProxy = 628F02E6CB597D044381491F /* PBXContainerItemProxy */;
+		};
+		EF98F3D445D7808FDD5AA151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-LKMenu_Tests-LKMenu";
+			target = A9CDF992940C1469FC4E510D /* Pods-LKMenu_Tests-LKMenu */;
+			targetProxy = F8D2B4FF140F44901B00EC88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		076E9D57B1A61952F75292C0 /* Release */ = {
+		017637F31C63D5A4453F9529 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B239DE5B5D7C17508F6E0CEF /* Pods-LKMenu_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Example/Pods-LKMenu_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_LKMenu_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		134CA25CCAB5AAFB85ED9525 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CB38DC0F0738B16076E8D7A /* Pods-LKMenu_Example.debug.xcconfig */;
+			baseConfigurationReference = C8A7E0C5DEA5EB07DCCF0AED /* Pods-LKMenu_Example.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -674,7 +645,238 @@
 			};
 			name = Debug;
 		};
-		155BC04BB2B5A99529AE9336 /* Debug */ = {
+		1679FA0891219C03CCB03DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		274623D1A4B43C2D0662DEE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4947C0AC0FD13DB8687FBFBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Example-LKMenu/Pods-LKMenu_Example-LKMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Example-LKMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Example-LKMenu/Pods-LKMenu_Example-LKMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		54496809A7E5C62630A54F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C4ED2658A053DB51EEAC650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 532B5F160AAE6F46420F5630 /* Pods-LKMenu_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Example/Pods-LKMenu_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LKMenu_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6701265A04D1F75E917DAA06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		78870219ADB6C717020B19E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 181E7D9316F0184D68C9BF28 /* Pods-LKMenu_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests/Pods-LKMenu_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LKMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CEF28BAD39079D3686CA271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		904AE324185D42AEA401A276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 385F963D98EC06C9051D035E /* Pods-LKMenu_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests/Pods-LKMenu_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_LKMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AC51F5E044DA18E4A270B3D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -713,9 +915,35 @@
 			};
 			name = Debug;
 		};
-		2EB2BF3E97245FC5D0E4EC58 /* Release */ = {
+		B5FA58964399FED81F6AF61A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
+			baseConfigurationReference = 37573981F26F5253CB41E946 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Tests";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		DEC29AA7434C92F2FA1783BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Example";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = LKMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		FC5517701ACCC1802591BF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96BF228285938E65CEBE6E7 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -739,302 +967,74 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		42C4EC8A205BDB25482B397F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		50702A64AF0AD1A99AAAF969 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Tests";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		68DA1C88B7941016EBAB99D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Tests";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		9D797ECF8A4281D1134CAE7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BB069C7CB8E6399EA807CC7 /* Pods-LKMenu_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests/Pods-LKMenu_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_LKMenu_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A44499CBD6D30698DE4E9901 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E197E4BD80DB0454ADCBDB05 /* Pods-LKMenu_Tests-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests-LKMenu/Pods-LKMenu_Tests-LKMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BBEE581C7F0804D021A9F28D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Example";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		C7586231DFF91ED97B7C2FB9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-LKMenu_Example-LKMenu/Pods-LKMenu_Example-LKMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Example-LKMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Example-LKMenu/Pods-LKMenu_Example-LKMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CD09B01EC4FD5B31D964D379 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E8EE7AF77AA028B89E1A2171 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5120C2C133DF24F12578D61 /* Pods-LKMenu_Example-LKMenu-Private.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LKMenu_Example";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = LKMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F9DDCD31D03F4AA0E42D60AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2967ACE660AEA086009788E9 /* Pods-LKMenu_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LKMenu_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-LKMenu_Tests/Pods-LKMenu_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_LKMenu_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		267C768F115687CCB05E2FB6 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests" */ = {
+		079F87C472C55618A335B0A6 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9DDCD31D03F4AA0E42D60AA /* Debug */,
-				9D797ECF8A4281D1134CAE7A /* Release */,
+				78870219ADB6C717020B19E2 /* Debug */,
+				904AE324185D42AEA401A276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27D004AD4E98A3615741683B /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu-LKMenu" */ = {
+		1A4C5A573426CC4FE3A839DB /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8EE7AF77AA028B89E1A2171 /* Debug */,
-				BBEE581C7F0804D021A9F28D /* Release */,
+				AC51F5E044DA18E4A270B3D3 /* Debug */,
+				1679FA0891219C03CCB03DFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4EFE4D0EF0357D1B23E2A991 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu" */ = {
+		45CC1FD233F97DFCED8D7332 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				42C4EC8A205BDB25482B397F /* Debug */,
-				A44499CBD6D30698DE4E9901 /* Release */,
+				4947C0AC0FD13DB8687FBFBA /* Debug */,
+				FC5517701ACCC1802591BF52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7C83A0EC55C08A01A76B27E /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example" */ = {
+		67E873F398B9FE6FEE223DFB /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				134CA25CCAB5AAFB85ED9525 /* Debug */,
-				076E9D57B1A61952F75292C0 /* Release */,
+				017637F31C63D5A4453F9529 /* Debug */,
+				5C4ED2658A053DB51EEAC650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BCD4C219BB8921E1DBB1B951 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu" */ = {
+		7CB0A769F04B3AED87B4401F /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Example-LKMenu-LKMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C7586231DFF91ED97B7C2FB9 /* Debug */,
-				2EB2BF3E97245FC5D0E4EC58 /* Release */,
+				8CEF28BAD39079D3686CA271 /* Debug */,
+				DEC29AA7434C92F2FA1783BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8EE290B435844F7FB620C56 /* Build configuration list for PBXProject "Pods" */ = {
+		866663BE17AF11CC7D2427DD /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu-LKMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				155BC04BB2B5A99529AE9336 /* Debug */,
-				CD09B01EC4FD5B31D964D379 /* Release */,
+				6701265A04D1F75E917DAA06 /* Debug */,
+				B5FA58964399FED81F6AF61A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD692F0E12118382E5BAFDD2 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu-LKMenu" */ = {
+		AEB89F0841569DAE25EDE243 /* Build configuration list for PBXNativeTarget "Pods-LKMenu_Tests-LKMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50702A64AF0AD1A99AAAF969 /* Debug */,
-				68DA1C88B7941016EBAB99D1 /* Release */,
+				54496809A7E5C62630A54F09 /* Debug */,
+				274623D1A4B43C2D0662DEE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3C813972E1578F27EBA660BB /* Project object */;
+	rootObject = 8741B059F2586C4560F34CD8 /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C099A36D6937C98AC016324"
+               BlueprintIdentifier = "A9CDF992940C1469FC4E510D"
                BuildableName = "LKMenu.framework"
                BlueprintName = "Pods-LKMenu_Tests-LKMenu"
                ReferencedContainer = "container:Pods.xcodeproj">

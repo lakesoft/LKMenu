@@ -17,15 +17,18 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         public var cellColor:UIColor = UIColor.clearColor()
         public var cellTextColor:UIColor = UIColor.grayColor()
         public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
+
         public enum BarStyle {
             case Top
             case Bottom
         }
+        public var barStyle:BarStyle = .Top
         
-        var barStyle:BarStyle = .Top
+        public init() {
+        }
     }
     
-    class MenuItemCell:UITableViewCell {
+    class LKMenuCell:UITableViewCell {
         
     }
     
@@ -78,6 +81,8 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         let nib = UINib(nibName: "LKMenu", bundle: bundle)
         nib.instantiateWithOwner(self, options: nil)
         
+        tableView.registerClass(LKMenuCell.self, forCellReuseIdentifier: "LKMenuCell")
+        
         backView.alpha = 0.0
         let g1 = UITapGestureRecognizer(target: self, action: "onBackView")
         backView.addGestureRecognizer(g1)
@@ -115,7 +120,6 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
             barView2.hidden = true
         }
         addDropShadowAtBottom(shadowView1)
-        
     }
     
     public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
@@ -133,7 +137,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         titleLabel2.textColor = appearance.titleColor
         closeButton1.tintColor = appearance.titleColor
         closeButton2.tintColor = appearance.titleColor
-        MenuItemCell.appearance().tintColor = appearance.tintColor
+        LKMenuCell.appearance().tintColor = appearance.tintColor
         tableView.backgroundColor = appearance.tableColor
         backView.backgroundColor = appearance.backColor
     }
@@ -208,7 +212,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = MenuItemCell(style: .Default, reuseIdentifier: "MenuItemCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("LKMenuCell") as! LKMenuCell
 
         cell.textLabel?.text = menuItems[indexPath.row]
         cell.textLabel?.textColor = appearance.cellTextColor
