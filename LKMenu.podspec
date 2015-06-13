@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LKMenu"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A short description of LKMenu."
   s.description      = <<-DESC
                        An optional longer description of LKMenu

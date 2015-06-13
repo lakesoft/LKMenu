@@ -201,7 +201,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         backView.layoutIfNeeded()
         
         if let index = selectedIndex {
-            tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: .Middle, animated: false)
+            tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: .Top, animated: false)
         }
 
         menuViewHeightConstraint.constant = parentView.bounds.size.height * appearance.size.rawValue
