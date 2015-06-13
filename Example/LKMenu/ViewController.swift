@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onOpen(sender: AnyObject) {
-        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD"], selectedIndex:2, title:"Menu Sample") { result in
+    func open(appearance:LKMenu.Appearance) {
+        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH"], selectedIndex:5, appearance:appearance, title:"Menu Sample") { result in
             switch result {
             case .Cancel:
                 println("canceled")
@@ -31,5 +31,37 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func onTopMenuTopBar(sender: AnyObject) {
+        var appearance = LKMenu.Appearance()
+        appearance.position = .Top
+        appearance.barStyle = .Top
+        appearance.size = .Large
+        open(appearance)
+    }
+
+    @IBAction func onTopMenuBottomBar(sender: AnyObject) {
+        var appearance = LKMenu.Appearance()
+        appearance.position = .Top
+        appearance.barStyle = .Bottom
+        open(appearance)
+    }
+
+    @IBAction func onBottomMenuTopBar(sender: AnyObject) {
+        var appearance = LKMenu.Appearance()
+        appearance.position = .Bottom
+        appearance.barStyle = .Top
+        open(appearance)
+    }
+
+    @IBAction func onBottomMenuBottomBar(sender: AnyObject) {
+        var appearance = LKMenu.Appearance()
+        appearance.position = .Bottom
+        appearance.barStyle = .Bottom
+        appearance.size = .Large
+        open(appearance)
+    }
+
 }
 
