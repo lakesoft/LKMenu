@@ -11,11 +11,14 @@ import UIKit
 public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate {
     
     public class Appearance {
-        public var tintColor:UIColor = UIColor.lightGrayColor()
+        public var barColor:UIColor = UIColor.lightGrayColor()
+        public var checkmarkColor:UIColor?
         public var titleColor:UIColor = UIColor.whiteColor()
-        public var tableColor:UIColor = UIColor(white: 1.0, alpha: 0.9)
-        public var cellColor:UIColor = UIColor.clearColor()
-        public var cellTextColor:UIColor = UIColor.grayColor()
+        public var tableColor:UIColor?
+        public var tableSperatorColor:UIColor?
+        public var cellColor:UIColor?
+        public var cellTextColor:UIColor?
+        public var cellSeparatorColor:UIColor?
         public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
 
         public enum BarStyle {
@@ -171,14 +174,24 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     }
     
     func setupAppearance() {
-        barView1.backgroundColor = appearance.tintColor
-        barView2.backgroundColor = appearance.tintColor
+        barView1.backgroundColor = appearance.barColor
+        barView2.backgroundColor = appearance.barColor
         titleLabel1.textColor = appearance.titleColor
         titleLabel2.textColor = appearance.titleColor
         closeButton1.tintColor = appearance.titleColor
         closeButton2.tintColor = appearance.titleColor
-        Cell.appearance().tintColor = appearance.tintColor
-        tableView.backgroundColor = appearance.tableColor
+        if let color = appearance.checkmarkColor {
+            Cell.appearance().tintColor = appearance.checkmarkColor
+        }
+        if let color = appearance.tableColor {
+            tableView.backgroundColor = appearance.tableColor
+        } else {
+            tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
+        }
+        if let color = appearance.tableSperatorColor {
+            tableView.separatorColor = appearance.tableSperatorColor
+            
+        }
         spacerView.backgroundColor = appearance.tableColor
 
         backView.backgroundColor = appearance.backColor
@@ -263,9 +276,12 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! Cell
 
         cell.textLabel?.text = menuItems[indexPath.row]
-        cell.textLabel?.textColor = appearance.cellTextColor
-        cell.backgroundColor = appearance.cellColor
-        
+        if let color = appearance.cellTextColor {
+            cell.textLabel?.textColor = UIColor.clearColor()
+        }
+        if let color = appearance.cellColor {
+            cell.backgroundColor = UIColor.grayColor()
+        }
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
         }
