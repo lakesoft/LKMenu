@@ -15,10 +15,9 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         public var checkmarkColor:UIColor?
         public var titleColor:UIColor = UIColor.whiteColor()
         public var tableColor:UIColor?
-        public var tableSperatorColor:UIColor?
+        public var tableSeparatorColor:UIColor?
         public var cellColor:UIColor?
         public var cellTextColor:UIColor?
-        public var cellSeparatorColor:UIColor?
         public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
 
         public enum BarStyle {
@@ -188,8 +187,8 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         } else {
             tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
         }
-        if let color = appearance.tableSperatorColor {
-            tableView.separatorColor = appearance.tableSperatorColor
+        if let color = appearance.tableSeparatorColor {
+            tableView.separatorColor = appearance.tableSeparatorColor
             
         }
         spacerView.backgroundColor = appearance.tableColor
