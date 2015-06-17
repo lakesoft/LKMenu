@@ -276,10 +276,10 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
 
         cell.textLabel?.text = menuItems[indexPath.row]
         if let color = appearance.cellTextColor {
-            cell.textLabel?.textColor = UIColor.clearColor()
+            cell.textLabel?.textColor = color
         }
         if let color = appearance.cellColor {
-            cell.backgroundColor = UIColor.grayColor()
+            cell.backgroundColor = color
         }
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
