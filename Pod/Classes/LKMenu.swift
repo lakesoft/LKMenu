@@ -17,6 +17,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         public var tableColor:UIColor?
         public var tableSeparatorColor:UIColor?
         public var cellColor:UIColor?
+        public var selectedCellColor:UIColor?
         public var cellTextColor:UIColor?
         public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
 
@@ -280,6 +281,10 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         }
         if let color = appearance.cellColor {
             cell.backgroundColor = color
+        }
+        if let color = appearance.selectedCellColor {
+            cell.selectedBackgroundView = UIView()
+            cell.selectedBackgroundView.backgroundColor = color
         }
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
