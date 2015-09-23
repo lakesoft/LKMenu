@@ -26,16 +26,16 @@ class ViewController: UIViewController {
         LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH"], selectedIndex:0, appearance:appearance, title:"Menu Sample") { result in
             switch result {
             case .Cancel:
-                println("canceled")
+                print("canceled")
             case .Selected(let index):
-                println("selected: \(index)")
+                print("selected: \(index)")
             }
         }
     }
     
     
     @IBAction func onTopMenuTopBar(sender: AnyObject) {
-        var appearance = LKMenu.Appearance()
+        let appearance = LKMenu.Appearance()
         appearance.position = .Top
         appearance.barStyle = .Top
         appearance.size = .Large
@@ -43,21 +43,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTopMenuBottomBar(sender: AnyObject) {
-        var appearance = LKMenu.Appearance()
+        let appearance = LKMenu.Appearance()
         appearance.position = .Top
         appearance.barStyle = .Bottom
         open(appearance)
     }
 
     @IBAction func onBottomMenuTopBar(sender: AnyObject) {
-        var appearance = LKMenu.Appearance()
+        let appearance = LKMenu.Appearance()
         appearance.position = .Bottom
         appearance.barStyle = .Top
         open(appearance)
     }
 
     @IBAction func onBottomMenuBottomBar(sender: AnyObject) {
-        var appearance = LKMenu.Appearance()
+        let appearance = LKMenu.Appearance()
         appearance.position = .Bottom
         appearance.barStyle = .Bottom
         appearance.size = .Large

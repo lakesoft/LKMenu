@@ -119,14 +119,14 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         }
         
         parentView.addSubview(backView)
-        backView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        backView.translatesAutoresizingMaskIntoConstraints = false
         
         let views = ["backView":backView]
         let hc0 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[backView]-0-|",
-            options: NSLayoutFormatOptions(0), metrics: nil, views: views)
+            options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(hc0)
         let vc0 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[backView]-0-|",
-            options: NSLayoutFormatOptions(0), metrics: nil, views: views)
+            options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(vc0)
         
         spacerHeightConstraint.constant = 5.0
@@ -181,15 +181,15 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         closeButton1.tintColor = appearance.titleColor
         closeButton2.tintColor = appearance.titleColor
         if let color = appearance.checkmarkColor {
-            Cell.appearance().tintColor = appearance.checkmarkColor
+            Cell.appearance().tintColor = color
         }
         if let color = appearance.tableColor {
-            tableView.backgroundColor = appearance.tableColor
+            tableView.backgroundColor = color
         } else {
             tableView.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
         }
         if let color = appearance.tableSeparatorColor {
-            tableView.separatorColor = appearance.tableSeparatorColor
+            tableView.separatorColor = color
             
         }
         spacerView.backgroundColor = appearance.tableColor
@@ -284,7 +284,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         }
         if let color = appearance.selectedCellColor {
             cell.selectedBackgroundView = UIView()
-            cell.selectedBackgroundView.backgroundColor = color
+            cell.selectedBackgroundView!.backgroundColor = color
         }
         if let selectedIndex = self.selectedIndex {
             cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
@@ -314,7 +314,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
             willClosing = velocity.y < -VelocityMax
         }
         if  willClosing {
-            cancel(duration: 0.4)
+            cancel(0.4)
         }
     }
     
@@ -330,7 +330,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
             
         case .Ended:
             if menuViewHeightConstraint.constant < backView.bounds.size.height*Appearance.Size.Small.rawValue {
-                cancel(duration: 0.2)
+                cancel(0.2)
             } else {
                 
                 if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.Small.rawValue + (Appearance.Size.Middle.rawValue-Appearance.Size.Small.rawValue)/2.0) {
