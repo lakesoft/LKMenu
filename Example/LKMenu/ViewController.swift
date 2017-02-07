@@ -21,46 +21,46 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func open(appearance:LKMenu.Appearance) {
-        appearance.selectedCellColor = UIColor.redColor()
-        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH"], selectedIndex:0, appearance:appearance, title:"Menu Sample") { result in
+    func open(_ appearance:LKMenu.Appearance) {
+        appearance.selectedCellColor = UIColor.red
+        LKMenu.open(self.view, menuItems:["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH"], selectedIndex:0, title:"Menu Sample", appearance:appearance) { result in
             switch result {
-            case .Cancel:
+            case .cancel:
                 print("canceled")
-            case .Selected(let index):
+            case .selected(let index):
                 print("selected: \(index)")
             }
         }
     }
     
     
-    @IBAction func onTopMenuTopBar(sender: AnyObject) {
+    @IBAction func onTopMenuTopBar(_ sender: AnyObject) {
         let appearance = LKMenu.Appearance()
-        appearance.position = .Top
-        appearance.barStyle = .Top
-        appearance.size = .Large
+        appearance.position = .top
+        appearance.barStyle = .top
+        appearance.size = .large
         open(appearance)
     }
 
-    @IBAction func onTopMenuBottomBar(sender: AnyObject) {
+    @IBAction func onTopMenuBottomBar(_ sender: AnyObject) {
         let appearance = LKMenu.Appearance()
-        appearance.position = .Top
-        appearance.barStyle = .Bottom
+        appearance.position = .top
+        appearance.barStyle = .bottom
         open(appearance)
     }
 
-    @IBAction func onBottomMenuTopBar(sender: AnyObject) {
+    @IBAction func onBottomMenuTopBar(_ sender: AnyObject) {
         let appearance = LKMenu.Appearance()
-        appearance.position = .Bottom
-        appearance.barStyle = .Top
+        appearance.position = .bottom
+        appearance.barStyle = .top
         open(appearance)
     }
 
-    @IBAction func onBottomMenuBottomBar(sender: AnyObject) {
+    @IBAction func onBottomMenuBottomBar(_ sender: AnyObject) {
         let appearance = LKMenu.Appearance()
-        appearance.position = .Bottom
-        appearance.barStyle = .Bottom
-        appearance.size = .Large
+        appearance.position = .bottom
+        appearance.barStyle = .bottom
+        appearance.size = .large
         open(appearance)
     }
 

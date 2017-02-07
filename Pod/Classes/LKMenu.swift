@@ -8,38 +8,38 @@
 
 import UIKit
 
-public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate {
+open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate {
     
-    public class Appearance {
-        public var barColor:UIColor = UIColor.lightGrayColor()
-        public var checkmarkColor:UIColor?
-        public var titleColor:UIColor = UIColor.whiteColor()
-        public var tableColor:UIColor?
-        public var tableSeparatorColor:UIColor?
-        public var cellColor:UIColor?
-        public var selectedCellColor:UIColor?
-        public var cellTextColor:UIColor?
-        public var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
+    open class Appearance {
+        open var barColor:UIColor = UIColor.lightGray
+        open var checkmarkColor:UIColor?
+        open var titleColor:UIColor = UIColor.white
+        open var tableColor:UIColor?
+        open var tableSeparatorColor:UIColor?
+        open var cellColor:UIColor?
+        open var selectedCellColor:UIColor?
+        open var cellTextColor:UIColor?
+        open var backColor:UIColor = UIColor(white: 0.0, alpha: 0.2)
 
         public enum BarStyle {
-            case Top
-            case Bottom
+            case top
+            case bottom
         }
-        public var barStyle:BarStyle = .Top
+        open var barStyle:BarStyle = .top
 
         public enum Position {
-            case Top
-            case Bottom
+            case top
+            case bottom
         }
-        public var position:Position = .Bottom
+        open var position:Position = .bottom
 
         public enum Size:CGFloat {
-            case Full = 1.0
-            case Large = 0.8    // 4 / 5
-            case Middle = 0.5  // 1 / 2
-            case Small = 0.3    // 1/ 3
+            case full = 1.0
+            case large = 0.8    // 4 / 5
+            case middle = 0.5  // 1 / 2
+            case small = 0.3    // 1/ 3
         }
-        public var size:Size = .Middle
+        open var size:Size = .middle
 
         public init() {
         }
@@ -81,11 +81,11 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     var menuItems: [String]!
 
     public enum Result {
-        case Cancel
-        case Selected(index:Int)
+        case cancel
+        case selected(index:Int)
     }
     
-    var completion:((result:Result)->Void)!
+    var completion:((_ result:Result)->Void)!
 
     func reset() {
         if backView != nil {
@@ -97,75 +97,75 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         self.menuItems = nil
     }
     
-    func loadViews(parentView:UIView, title:String?) {
+    func loadViews(_ parentView:UIView, title:String?) {
         
-        let frameworkBundle = NSBundle(forClass: LKMenu.self)
-        let path = frameworkBundle.pathForResource("LKMenu", ofType: "bundle")!
-        let bundle = NSBundle(path: path)
+        let frameworkBundle = Bundle(for: LKMenu.self)
+        let path = frameworkBundle.path(forResource: "LKMenu", ofType: "bundle")!
+        let bundle = Bundle(path: path)
         let nib = UINib(nibName: "LKMenu", bundle: bundle)
-        nib.instantiateWithOwner(self, options: nil)
+        nib.instantiate(withOwner: self, options: nil)
         
-        tableView.registerClass(Cell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(Cell.self, forCellReuseIdentifier: "Cell")
         
         backView.alpha = 0.0
-        let g1 = UITapGestureRecognizer(target: self, action: "onBackView")
+        let g1 = UITapGestureRecognizer(target: self, action: #selector(LKMenu.onBackView))
         backView.addGestureRecognizer(g1)
         g1.delegate = self
 
-        if appearance.position == .Top && appearance.barStyle == .Bottom {
-                barView2.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pannedOnBar:"))
-        } else if appearance.position == .Bottom && appearance.barStyle == .Top {
-                barView1.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "pannedOnBar:"))
+        if appearance.position == .top && appearance.barStyle == .bottom {
+                barView2.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(LKMenu.pannedOnBar(_:))))
+        } else if appearance.position == .bottom && appearance.barStyle == .top {
+                barView1.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(LKMenu.pannedOnBar(_:))))
         }
         
         parentView.addSubview(backView)
         backView.translatesAutoresizingMaskIntoConstraints = false
         
         let views = ["backView":backView]
-        let hc0 = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[backView]-0-|",
+        let hc0 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[backView]-0-|",
             options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(hc0)
-        let vc0 = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[backView]-0-|",
+        let vc0 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[backView]-0-|",
             options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(vc0)
         
-        spacerHeightConstraint.constant = 5.0
+        spacerHeightConstraint.constant = 0.0
         switch appearance.position {
-        case .Top:
+        case .top:
             backView.removeConstraint(menuViewBottomConstraint)
             bar1HeightConstraint.constant += 22.0                                   // status bar height
             menuViewTopConstraint.constant = 0
-            if appearance.barStyle == .Bottom {
+            if appearance.barStyle == .bottom {
                 spacerHeightConstraint.constant = 22.0
             }
-        case .Bottom:
+        case .bottom:
             backView.removeConstraint(menuViewTopConstraint)
             menuViewBottomConstraint.constant = 0
         }
 
         if let str = title {
             switch appearance.barStyle {
-            case .Top:
+            case .top:
                 titleLabel1.text = str
                 bar2HeightConstraint.constant = 0
-                barView2.hidden = true
-            case .Bottom:
+                barView2.isHidden = true
+            case .bottom:
                 titleLabel2.text = str
                 bar1HeightConstraint.constant = 0
-                barView1.hidden = true
+                barView1.isHidden = true
             }
         } else {
             bar1HeightConstraint.constant = 0
             bar2HeightConstraint.constant = 0
-            barView1.hidden = true
-            barView2.hidden = true
+            barView1.isHidden = true
+            barView2.isHidden = true
         }
         addDropShadowAtBottom(shadowView1)
         addDropShadowAtTop(shadowView2)
         
     }
     
-    public func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view == backView) {
             return true;
         }else{
@@ -197,7 +197,7 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         backView.backgroundColor = appearance.backColor
     }
     
-    func open(parentView:UIView, menuItems:[String], selectedIndex:Int?, title:String?, appearance:Appearance, completion:(result:Result)->Void) {
+    func open(_ parentView:UIView, menuItems:[String], selectedIndex:Int?, title:String?, appearance:Appearance, completion:@escaping (_ result:Result)->Void) {
         
         reset()
 
@@ -214,12 +214,12 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         backView.layoutIfNeeded()
         
         if let index = selectedIndex {
-            tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0), atScrollPosition: .Top, animated: false)
+            tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: false)
         }
 
         menuViewHeightConstraint.constant = parentView.bounds.size.height * appearance.size.rawValue
-        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.7,
-            initialSpringVelocity: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7,
+            initialSpringVelocity: 0.0, options: UIViewAnimationOptions(),
             animations: { () -> Void in
                 self.backView.alpha = 1.0
                 self.backView.layoutIfNeeded()
@@ -228,20 +228,20 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
         }
     }
     
-    func close(result:Result, duration:NSTimeInterval = 0.2) {
-        completion(result: result)
+    func close(_ result:Result, duration:TimeInterval = 0.2) {
+        completion(result)
         menuViewHeightConstraint.constant = 0.0
-        UIView.animateWithDuration(duration, animations: { () -> Void in
+        UIView.animate(withDuration: duration, animations: { () -> Void in
             self.backView.alpha = 0.0
             self.backView.layoutIfNeeded()
-        }) { (Bool) -> Void in
+        }, completion: { (Bool) -> Void in
             self.reset()
             self.opened = false
-        }
+        }) 
     }
     
-    func cancel(duration:NSTimeInterval = 0.2) {
-        close(.Cancel, duration:duration)
+    func cancel(_ duration:TimeInterval = 0.2) {
+        close(.cancel, duration:duration)
     }
 
     deinit {
@@ -254,26 +254,26 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
 
     
     // MARK: - API
-    public class func open(parentView:UIView, menuItems:[String],
+    open class func open(_ parentView:UIView, menuItems:[String],
         selectedIndex:Int?=nil, title:String?=nil, appearance:Appearance=Appearance(),
-        completion:(result:Result)->Void) {
+        completion:@escaping (_ result:Result)->Void) {
             sharedMenu.open(parentView, menuItems:menuItems, selectedIndex:selectedIndex, title:title, appearance:appearance, completion:completion)
     }
-    public class func close() {
+    open class func close() {
         sharedMenu.cancel()
     }
-    public static var opened:Bool {
+    open static var opened:Bool {
         return sharedMenu.opened
     }
     
     
     // MARK: - UITableViewDataSource
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! Cell
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! Cell
 
         cell.textLabel?.text = menuItems[indexPath.row]
         if let color = appearance.cellTextColor {
@@ -287,30 +287,30 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
             cell.selectedBackgroundView!.backgroundColor = color
         }
         if let selectedIndex = self.selectedIndex {
-            cell.accessoryType = (selectedIndex == indexPath.row) ? .Checkmark : .None
+            cell.accessoryType = (selectedIndex == indexPath.row) ? .checkmark : .none
         }
         return cell
     }
     
     // MARK: - UITableViewDelegate
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        close(.Selected(index: indexPath.row))
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        close(.selected(index: indexPath.row))
     }
 
-    @IBAction func onClose(sender: AnyObject) {
+    @IBAction func onClose(_ sender: AnyObject) {
         self.cancel()
     }
 
     
     // UIScrollViewDelegate
     let VelocityMax = CGFloat(2.3)
-    public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    open func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 
         let willClosing:Bool
         switch appearance.position {
-        case .Top:
+        case .top:
             willClosing = velocity.y > VelocityMax
-        case .Bottom:
+        case .bottom:
             willClosing = velocity.y < -VelocityMax
         }
         if  willClosing {
@@ -320,35 +320,35 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     
     // UIPanGestureRecognizer
     var py:CGFloat!
-    func pannedOnBar(pgr: UIPanGestureRecognizer) {
+    func pannedOnBar(_ pgr: UIPanGestureRecognizer) {
         
-        let y = pgr.locationInView(backView).y
+        let y = pgr.location(in: backView).y
         switch pgr.state {
-        case .Changed:
-            menuViewHeightConstraint.constant += (py - y) * (appearance.position == .Top ? -1.0 : 1.0)
+        case .changed:
+            menuViewHeightConstraint.constant += (py - y) * (appearance.position == .top ? -1.0 : 1.0)
             menuView.layoutIfNeeded()
             
-        case .Ended:
-            if menuViewHeightConstraint.constant < backView.bounds.size.height*Appearance.Size.Small.rawValue {
+        case .ended:
+            if menuViewHeightConstraint.constant < backView.bounds.size.height*Appearance.Size.small.rawValue {
                 cancel(0.2)
             } else {
                 
-                if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.Small.rawValue + (Appearance.Size.Middle.rawValue-Appearance.Size.Small.rawValue)/2.0) {
-                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.Small.rawValue
-                } else if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.Middle.rawValue + (Appearance.Size.Large.rawValue-Appearance.Size.Middle.rawValue)/2.0) {
-                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.Middle.rawValue
-                } else if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.Large.rawValue + (Appearance.Size.Full.rawValue-Appearance.Size.Large.rawValue)/2.0) {
-                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.Large.rawValue
+                if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.small.rawValue + (Appearance.Size.middle.rawValue-Appearance.Size.small.rawValue)/2.0) {
+                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.small.rawValue
+                } else if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.middle.rawValue + (Appearance.Size.large.rawValue-Appearance.Size.middle.rawValue)/2.0) {
+                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.middle.rawValue
+                } else if menuViewHeightConstraint.constant < backView.bounds.size.height*(Appearance.Size.large.rawValue + (Appearance.Size.full.rawValue-Appearance.Size.large.rawValue)/2.0) {
+                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.large.rawValue
                 } else {
-                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.Full.rawValue
+                    menuViewHeightConstraint.constant = backView.bounds.size.height*Appearance.Size.full.rawValue
                 }
-                shadowView1.hidden = true
-                shadowView2.hidden = true
-                UIView.animateWithDuration(0.1, animations: { () -> Void in
+                shadowView1.isHidden = true
+                shadowView2.isHidden = true
+                UIView.animate(withDuration: 0.1, animations: { () -> Void in
                     self.menuView.layoutIfNeeded()
                 }, completion: { (Bool) -> Void in
-                    self.shadowView1.hidden = false
-                    self.shadowView2.hidden = false
+                    self.shadowView1.isHidden = false
+                    self.shadowView2.isHidden = false
                 })
             }
         default:
@@ -358,26 +358,26 @@ public class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestur
     }
 }
 
-func addDropShadowAtTop(view:UIView) {
+func addDropShadowAtTop(_ view:UIView) {
     let subLayer = CALayer()
-    subLayer.frame = CGRectMake(view.bounds.origin.x, view.bounds.origin.y, 99999.0, view.bounds.size.height)
+    subLayer.frame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y, width: 99999.0, height: view.bounds.size.height)
     view.layer.addSublayer(subLayer)
     subLayer.masksToBounds = true
-    let path = UIBezierPath(rect:CGRectMake(-7.5, -7.5, subLayer.bounds.size.width+7.5, 7.5))
-    subLayer.shadowOffset = CGSizeMake(2.5, 2.5)
-    subLayer.shadowColor = UIColor.blackColor().CGColor
+    let path = UIBezierPath(rect:CGRect(x: -7.5, y: -7.5, width: subLayer.bounds.size.width+7.5, height: 7.5))
+    subLayer.shadowOffset = CGSize(width: 2.5, height: 2.5)
+    subLayer.shadowColor = UIColor.black.cgColor
     subLayer.shadowOpacity = 0.2
-    subLayer.shadowPath = path.CGPath
+    subLayer.shadowPath = path.cgPath
 }
 
-func addDropShadowAtBottom(view:UIView) {
+func addDropShadowAtBottom(_ view:UIView) {
     let subLayer = CALayer()
-    subLayer.frame = CGRectMake(view.bounds.origin.x, view.bounds.origin.y, 99999.0, view.bounds.size.height)
+    subLayer.frame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y, width: 99999.0, height: view.bounds.size.height)
     view.layer.addSublayer(subLayer)
     subLayer.masksToBounds = true
-    let path = UIBezierPath(rect:CGRectMake(-7.5, view.bounds.height, subLayer.bounds.size.width+7.5, 7.5))
-    subLayer.shadowOffset = CGSizeMake(2.5, -2.5)
-    subLayer.shadowColor = UIColor.blackColor().CGColor
+    let path = UIBezierPath(rect:CGRect(x: -7.5, y: view.bounds.height, width: subLayer.bounds.size.width+7.5, height: 7.5))
+    subLayer.shadowOffset = CGSize(width: 2.5, height: -2.5)
+    subLayer.shadowColor = UIColor.black.cgColor
     subLayer.shadowOpacity = 0.1
-    subLayer.shadowPath = path.CGPath
+    subLayer.shadowPath = path.cgPath
 }
