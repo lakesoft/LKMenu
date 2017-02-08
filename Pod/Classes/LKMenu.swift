@@ -36,6 +36,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
         public enum Size:CGFloat {
             case full = 1.0
             case large = 0.8    // 4 / 5
+            case middle65 = 0.65
             case middle = 0.5  // 1 / 2
             case small = 0.3    // 1/ 3
         }
