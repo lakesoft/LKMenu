@@ -122,7 +122,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
         parentView.addSubview(backView)
         backView.translatesAutoresizingMaskIntoConstraints = false
         
-        let views = ["backView":backView]
+        let views: [String: Any] = ["backView":backView]
         let hc0 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[backView]-0-|",
             options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(hc0)
