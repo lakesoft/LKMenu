@@ -1,5 +1,5 @@
 framework module LKMenu {
-  umbrella header "Pods-LKMenu_Tests-LKMenu-umbrella.h"
+  umbrella header "LKMenu-umbrella.h"
 
   export *
   module * { export * }

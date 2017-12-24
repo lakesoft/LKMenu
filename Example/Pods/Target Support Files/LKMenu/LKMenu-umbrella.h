@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LKMenu_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LKMenu_ExampleVersionString[];
+FOUNDATION_EXPORT double LKMenuVersionNumber;
+FOUNDATION_EXPORT const unsigned char LKMenuVersionString[];
 

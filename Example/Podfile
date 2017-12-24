@@ -1,12 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'LKMenu_Example', :exclusive => true do
+target 'LKMenu_Example' do
   pod "LKMenu", :path => "../"
 end
 
-target 'LKMenu_Tests', :exclusive => true do
-  pod "LKMenu", :path => "../"
-
-  
-end

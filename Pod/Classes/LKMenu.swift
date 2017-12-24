@@ -249,7 +249,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
         tableView.removeFromSuperview()
     }
     
-    func onBackView() {
+    @objc func onBackView() {
         cancel()
     }
 
@@ -321,7 +321,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
     
     // UIPanGestureRecognizer
     var py:CGFloat!
-    func pannedOnBar(_ pgr: UIPanGestureRecognizer) {
+    @objc func pannedOnBar(_ pgr: UIPanGestureRecognizer) {
         
         let y = pgr.location(in: backView).y
         switch pgr.state {

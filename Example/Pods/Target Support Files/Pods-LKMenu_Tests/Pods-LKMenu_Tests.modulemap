@@ -1,6 +1,0 @@
-framework module Pods_LKMenu_Tests {
-  umbrella header "Pods-LKMenu_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

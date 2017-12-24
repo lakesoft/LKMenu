@@ -1,5 +1,5 @@
 PODS:
-  - LKMenu (0.1.0)
+  - LKMenu (1.1.0)
 
 DEPENDENCIES:
   - LKMenu (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LKMenu: 2d4cceef1f8f4a694f17bf658700d77728e9de0c
+  LKMenu: 5565ae11753189c4b091b955564ac6a2ae573658
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: 5d9f013f8e9c0ff6f1e3daaf7b48228ed298eac4
+
+COCOAPODS: 1.3.1
