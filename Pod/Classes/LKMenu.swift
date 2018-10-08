@@ -124,10 +124,10 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
         
         let views: [String: Any] = ["backView":backView]
         let hc0 = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[backView]-0-|",
-            options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(hc0)
         let vc0 = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[backView]-0-|",
-            options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+            options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views)
         parentView.addConstraints(vc0)
         
         spacerHeightConstraint.constant = 0.0
@@ -166,7 +166,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
         
     }
     
-    open func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         if (touch.view == backView) {
             return true;
         }else{
@@ -220,7 +220,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
 
         menuViewHeightConstraint.constant = parentView.bounds.size.height * appearance.size.rawValue
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7,
-            initialSpringVelocity: 0.0, options: UIViewAnimationOptions(),
+            initialSpringVelocity: 0.0, options: UIView.AnimationOptions(),
             animations: { () -> Void in
                 self.backView.alpha = 1.0
                 self.backView.layoutIfNeeded()
@@ -263,17 +263,17 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
     open class func close() {
         sharedMenu.cancel()
     }
-    open static var opened:Bool {
+    public static var opened:Bool {
         return sharedMenu.opened
     }
     
     
     // MARK: - UITableViewDataSource
-    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
     }
     
-    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! Cell
 
         cell.textLabel?.text = menuItems[indexPath.row]
@@ -294,7 +294,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
     }
     
     // MARK: - UITableViewDelegate
-    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         close(.selected(index: indexPath.row))
     }
 
@@ -305,7 +305,7 @@ open class LKMenu: NSObject,UITableViewDataSource,UITableViewDelegate,UIGestureR
     
     // UIScrollViewDelegate
     let VelocityMax = CGFloat(2.3)
-    open func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 
         let willClosing:Bool
         switch appearance.position {
